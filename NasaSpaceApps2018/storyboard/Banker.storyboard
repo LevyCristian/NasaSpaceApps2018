@@ -9,6 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main-->
+        <scene sceneID="wOw-wC-sZs">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="disasters" storyboardName="Main" id="Pky-Sv-otC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZa-Fi-gs9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182" y="-256"/>
+        </scene>
         <!--Banker View Controller-->
         <scene sceneID="UND-Ky-V3P">
             <objects>
@@ -18,8 +26,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tE-Wd-7gn">
-                                <rect key="frame" x="16" y="36" width="64" height="30"/>
-                                <state key="normal" title="Disasters"/>
+                                <rect key="frame" x="16" y="36" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <segue destination="Pky-Sv-otC" kind="show" id="AsT-fC-bzN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4v7-VB-8gw">
                                 <rect key="frame" x="329" y="36" width="30" height="30"/>

@@ -48,17 +48,21 @@ extension DisasterViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let query = NSPredicate(format: "isMine = true")
         myDisasters = DataManager.executeThe(query: query, forEntityName: "Disaster") as? [Disaster] ?? []
-        //return myDisasters.count
-        return 2
+        return myDisasters.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDisaster", for: indexPath) as! DisastersCollectionViewCell
         
-        //let disaster = myDisasters[indexPath.row]
-        //cell.image = UIImage(data: disaster.image) ??
-        //cell.lblName.text = disaster.name
-        cell.lblName.text = "teste"
+        let disaster = myDisasters[indexPath.row]
+        cell.lblName.text = disaster.name
+        guard let imageData = disaster.image else {
+            cell.image.image = UIImage(named: "image")
+            return cell
+        }
+        cell.image.image = UIImage(data: imageData)
+        
+        //cell.lblName.text = "teste"
         return cell
     }
     
@@ -72,6 +76,8 @@ extension DisasterViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return minimumInteritemSpacing
     }
+    
+    
     
     
 }

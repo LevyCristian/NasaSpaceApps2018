@@ -11,8 +11,8 @@
 		2F9A4B49217B94C500710CDE /* DisastersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A4B40217B94C500710CDE /* DisastersCollectionViewCell.xib */; };
 		2F9A4B4A217B94C500710CDE /* DisastersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A4B41217B94C500710CDE /* DisastersCollectionViewCell.swift */; };
 		2F9A4B4B217B94C500710CDE /* DisasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A4B43217B94C500710CDE /* DisasterViewController.swift */; };
-		2F9A4B4C217B94C500710CDE /* disasters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A4B45217B94C500710CDE /* disasters.storyboard */; };
 		2F9A4B4D217B94C500710CDE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9A4B47217B94C500710CDE /* DataManager.swift */; };
+		2F9A4B4F217BAD0300710CDE /* EditDesasters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9A4B4E217BAD0300710CDE /* EditDesasters.storyboard */; };
 		D72C0F88217B719000ADF7EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C0F87217B719000ADF7EE /* AppDelegate.swift */; };
 		D72C0F8A217B719000ADF7EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C0F89217B719000ADF7EE /* ViewController.swift */; };
 		D72C0F8D217B719000ADF7EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72C0F8B217B719000ADF7EE /* Main.storyboard */; };
@@ -48,8 +48,8 @@
 		2F9A4B40217B94C500710CDE /* DisastersCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisastersCollectionViewCell.xib; sourceTree = "<group>"; };
 		2F9A4B41217B94C500710CDE /* DisastersCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisastersCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F9A4B43217B94C500710CDE /* DisasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisasterViewController.swift; sourceTree = "<group>"; };
-		2F9A4B45217B94C500710CDE /* disasters.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = disasters.storyboard; sourceTree = "<group>"; };
 		2F9A4B47217B94C500710CDE /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2F9A4B4E217BAD0300710CDE /* EditDesasters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditDesasters.storyboard; sourceTree = "<group>"; };
 		D72C0F84217B719000ADF7EE /* NasaSpaceApps2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaSpaceApps2018.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72C0F87217B719000ADF7EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D72C0F89217B719000ADF7EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,7 +122,9 @@
 		2F9A4B44217B94C500710CDE /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				2F9A4B45217B94C500710CDE /* disasters.storyboard */,
+				D72C0F8B217B719000ADF7EE /* Main.storyboard */,
+				D72C0FB8217B759B00ADF7EE /* Banker.storyboard */,
+				2F9A4B4E217BAD0300710CDE /* EditDesasters.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -165,7 +167,6 @@
 				D72C0FBA217B781000ADF7EE /* Banker */,
 				D72C0F87217B719000ADF7EE /* AppDelegate.swift */,
 				D72C0F89217B719000ADF7EE /* ViewController.swift */,
-				D72C0F8B217B719000ADF7EE /* Main.storyboard */,
 				D72C0F91217B719000ADF7EE /* Assets.xcassets */,
 				D72C0F93217B719000ADF7EE /* LaunchScreen.storyboard */,
 				D72C0F96217B719000ADF7EE /* Info.plist */,
@@ -195,7 +196,6 @@
 		D72C0FBA217B781000ADF7EE /* Banker */ = {
 			isa = PBXGroup;
 			children = (
-				D72C0FB8217B759B00ADF7EE /* Banker.storyboard */,
 				D72C0FBB217B784200ADF7EE /* BankerViewController.swift */,
 				D72C0FBD217B796800ADF7EE /* BankerCellTableViewCell.swift */,
 				D72C0FBE217B796800ADF7EE /* BankerCellTableViewCell.xib */,
@@ -310,8 +310,8 @@
 				D72C0FC0217B796800ADF7EE /* BankerCellTableViewCell.xib in Resources */,
 				2F9A4B49217B94C500710CDE /* DisastersCollectionViewCell.xib in Resources */,
 				D72C0F95217B719000ADF7EE /* LaunchScreen.storyboard in Resources */,
+				2F9A4B4F217BAD0300710CDE /* EditDesasters.storyboard in Resources */,
 				D72C0F92217B719000ADF7EE /* Assets.xcassets in Resources */,
-				2F9A4B4C217B94C500710CDE /* disasters.storyboard in Resources */,
 				D72C0F8D217B719000ADF7EE /* Main.storyboard in Resources */,
 				D72C0FB9217B759B00ADF7EE /* Banker.storyboard in Resources */,
 			);

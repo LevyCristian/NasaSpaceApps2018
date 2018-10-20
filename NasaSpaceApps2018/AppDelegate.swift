@@ -17,7 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        loadInfo()
         return true
+    }
+    
+    func loadInfo(){
+        let nameDisasters = ["Drought", "Earthquakes", "Extreme heat", "Flooding", "Hurricanes", "Snow and ice", "Tornadoes", "Tsunamis", "Volcanoes", "Wildfires"]
+        
+        for (ind, name) in nameDisasters.enumerated() {
+            let disaster = Disaster(context: DataManager.getContext())
+            disaster.name = name
+            guard let image = UIImage(named: "image") else {return}
+            let dataImage = image.pngData()
+            disaster.image = dataImage
+            if ind % 2 == 0 {
+                disaster.isMine = true
+            }
+        }
+   
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
