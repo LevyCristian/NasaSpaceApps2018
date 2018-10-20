@@ -94,13 +94,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F9A4B3B217B94C500710CDE /* Functionalities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Functionalities;
-			sourceTree = "<group>";
-		};
 		2F9A4B3E217B94C500710CDE /* Colletions and Tables */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				2F9A4B3E217B94C500710CDE /* Colletions and Tables */,
-				2F9A4B3B217B94C500710CDE /* Functionalities */,
 				2F9A4B42217B94C500710CDE /* InitialScreen */,
 				2F9A4B46217B94C500710CDE /* Model */,
 				2F9A4B44217B94C500710CDE /* storyboard */,
