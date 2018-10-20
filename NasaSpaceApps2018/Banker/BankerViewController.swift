@@ -30,7 +30,7 @@ class BankerViewController: UIViewController {
         let alert = UIAlertController(title: "Add item to banker", message: "Enter a name", preferredStyle: .alert)
         
         alert.addTextField { (textField) in
-            textField.text = ""
+             textField.placeholder = "Input your name here..."
         }
         
         alert.addAction(UIAlertAction(title: "Create", style: .default, handler: { [weak alert] (_) in
