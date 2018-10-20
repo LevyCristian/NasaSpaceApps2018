@@ -59,17 +59,23 @@ extension BankerViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
+
         let editAction = UITableViewRowAction(style: .normal, title: "Details") { (rowAction, indexPath) in
             //TODO: edit the row at indexPath here
         }
         editAction.backgroundColor = .blue
-        let deleteAction = UITableViewRowAction(style: .normal, title: "Delete") { (rowAction, indexPath) in
-            //TODO: Delete the row at indexPath here
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            // delete item at indexPath
+            self.itens.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            print(self.itens)
         }
-        deleteAction.backgroundColor = .red
-        
+
         return [editAction,deleteAction]
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
 }

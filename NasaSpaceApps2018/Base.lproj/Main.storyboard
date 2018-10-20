@@ -15,7 +15,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTn-AI-X0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardIdentifier="banker" storyboardName="Banker" id="GcY-XG-PJe" sceneMemberID="viewController"/>
             </objects>
-            <point key="canvasLocation" x="-727" y="-189"/>
+            <point key="canvasLocation" x="924" y="97"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
