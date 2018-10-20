@@ -11,7 +11,7 @@ import UIKit
 class BankerViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var itens = ["oi", "oi", "oi"]
+    var itens = [Supplies]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,12 @@ class BankerViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Create", style: .default, handler: { [weak alert] (_) in
             let textField = alert!.textFields![0] // Force unwrapping because we know it exists.
             guard let text = textField.text else {return}
-            self.itens.append(text)
+            
+            let supplie = Supplies(context: DataManager.getContext())
+            supplie.name = text
+            DataManager.saveContext()
+            
+            self.itens.append(supplie)
             self.tableView.reloadData()
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -51,7 +56,7 @@ extension BankerViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bankerCell", for: indexPath) as! BankerCellTableViewCell
-        cell.information.text = itens[indexPath.row]
+        cell.information.text = itens[indexPath.row].name
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -66,6 +71,7 @@ extension BankerViewController: UITableViewDelegate, UITableViewDataSource{
         editAction.backgroundColor = .blue
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
             // delete item at indexPath
+           // self.itens[indexPath.row]..delete
             self.itens.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
             print(self.itens)
@@ -73,7 +79,9 @@ extension BankerViewController: UITableViewDelegate, UITableViewDataSource{
 
         return [editAction,deleteAction]
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
