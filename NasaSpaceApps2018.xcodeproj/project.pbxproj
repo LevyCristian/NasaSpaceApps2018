@@ -15,6 +15,10 @@
 		D72C0F95217B719000ADF7EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72C0F93217B719000ADF7EE /* LaunchScreen.storyboard */; };
 		D72C0FA0217B719000ADF7EE /* NasaSpaceApps2018Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C0F9F217B719000ADF7EE /* NasaSpaceApps2018Tests.swift */; };
 		D72C0FAB217B719000ADF7EE /* NasaSpaceApps2018UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C0FAA217B719000ADF7EE /* NasaSpaceApps2018UITests.swift */; };
+		D72C0FB9217B759B00ADF7EE /* Banker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72C0FB8217B759B00ADF7EE /* Banker.storyboard */; };
+		D72C0FBC217B784200ADF7EE /* BankerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C0FBB217B784200ADF7EE /* BankerViewController.swift */; };
+		D72C0FBF217B796800ADF7EE /* BankerCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C0FBD217B796800ADF7EE /* BankerCellTableViewCell.swift */; };
+		D72C0FC0217B796800ADF7EE /* BankerCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72C0FBE217B796800ADF7EE /* BankerCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		D72C0FA6217B719000ADF7EE /* NasaSpaceApps2018UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaSpaceApps2018UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72C0FAA217B719000ADF7EE /* NasaSpaceApps2018UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaSpaceApps2018UITests.swift; sourceTree = "<group>"; };
 		D72C0FAC217B719000ADF7EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D72C0FB8217B759B00ADF7EE /* Banker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Banker.storyboard; sourceTree = "<group>"; };
+		D72C0FBB217B784200ADF7EE /* BankerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankerViewController.swift; sourceTree = "<group>"; };
+		D72C0FBD217B796800ADF7EE /* BankerCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankerCellTableViewCell.swift; sourceTree = "<group>"; };
+		D72C0FBE217B796800ADF7EE /* BankerCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankerCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 		D72C0F86217B719000ADF7EE /* NasaSpaceApps2018 */ = {
 			isa = PBXGroup;
 			children = (
+				D72C0FBA217B781000ADF7EE /* Banker */,
 				D72C0F87217B719000ADF7EE /* AppDelegate.swift */,
 				D72C0F89217B719000ADF7EE /* ViewController.swift */,
 				D72C0F8B217B719000ADF7EE /* Main.storyboard */,
@@ -126,6 +135,17 @@
 				D72C0FAC217B719000ADF7EE /* Info.plist */,
 			);
 			path = NasaSpaceApps2018UITests;
+			sourceTree = "<group>";
+		};
+		D72C0FBA217B781000ADF7EE /* Banker */ = {
+			isa = PBXGroup;
+			children = (
+				D72C0FB8217B759B00ADF7EE /* Banker.storyboard */,
+				D72C0FBB217B784200ADF7EE /* BankerViewController.swift */,
+				D72C0FBD217B796800ADF7EE /* BankerCellTableViewCell.swift */,
+				D72C0FBE217B796800ADF7EE /* BankerCellTableViewCell.xib */,
+			);
+			path = Banker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +252,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72C0FC0217B796800ADF7EE /* BankerCellTableViewCell.xib in Resources */,
 				D72C0F95217B719000ADF7EE /* LaunchScreen.storyboard in Resources */,
 				D72C0F92217B719000ADF7EE /* Assets.xcassets in Resources */,
 				D72C0F8D217B719000ADF7EE /* Main.storyboard in Resources */,
+				D72C0FB9217B759B00ADF7EE /* Banker.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72C0FBF217B796800ADF7EE /* BankerCellTableViewCell.swift in Sources */,
 				D72C0F8A217B719000ADF7EE /* ViewController.swift in Sources */,
 				D72C0F90217B719000ADF7EE /* NasaSpaceApps2018.xcdatamodeld in Sources */,
 				D72C0F88217B719000ADF7EE /* AppDelegate.swift in Sources */,
+				D72C0FBC217B784200ADF7EE /* BankerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
