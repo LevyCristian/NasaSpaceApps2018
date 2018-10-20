@@ -12,10 +12,18 @@
         <!--Banker-->
         <scene sceneID="0Yg-zS-OZk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dTn-AI-X0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardIdentifier="banker" storyboardName="Banker" id="GcY-XG-PJe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTn-AI-X0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="924" y="97"/>
+        </scene>
+        <!--disasters-->
+        <scene sceneID="jq4-FQ-i9X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="disasters" referencedIdentifier="disasters" id="A4a-6m-nf6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dly-fC-wLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="175"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -26,11 +34,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZ4-Pe-3Nc">
-                                <rect key="frame" x="126" y="291" width="46" height="30"/>
+                                <rect key="frame" x="125" y="291" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Banker"/>
                                 <connections>
                                     <segue destination="GcY-XG-PJe" kind="show" identifier="banker" id="DOT-n8-Ng7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmA-Ze-KUf">
+                                <rect key="frame" x="120" y="430" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Initial Screen"/>
+                                <connections>
+                                    <segue destination="A4a-6m-nf6" kind="show" id="dUg-0A-GTa"/>
                                 </connections>
                             </button>
                         </subviews>
